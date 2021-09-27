@@ -1,0 +1,36 @@
+<div style="float: right;">
+    <a href="/receipt/add" class="btn btn-success">Create a new Receipt +</a>
+</div>
+<br>
+<table class="table table-dark">
+    <br>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Number Receipt</th>
+            <th scope="col">Purchase Date</th>
+            <th scope="col">Purchase Time</th>
+            <th scope="col">ID Customer</th>
+            <th scope="col">Name Customer</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each receipt}}
+        <tr>
+            <th scope="row">{{id}}</th>
+            <th scope="row">{{numberReceipt}}</th>
+            <th scope="row">{{purchaseDate}}</th>
+            <th scope="row">{{purchaseTime}}</th>
+            <th scope="row">{{idCustomer}}</th>
+            <th scope="row">{{nameCustomer}}</th>
+            <th scope="row">
+                <form action="/receipt/delete/{{id}}" method="POST">
+                    <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+                </form>
+                <a href="/receipt/edit/{{id}}" class="btn btn-warning">Edit</a>
+            </th>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

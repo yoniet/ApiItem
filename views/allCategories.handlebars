@@ -1,0 +1,31 @@
+<div style="float: right;">
+    <a href="/category/add" class="btn btn-success">Create a new Category +</a>
+</div>
+<br>
+<table class="table table-dark">
+    <br>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Number Category</th>
+            <th scope="col">Name</th>
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {{#each category}}
+        <tr>
+            <th scope="row">{{id}}</th>
+            <th scope="row">{{numberCategory}}</th>
+            <th scope="row">{{name}}</th>
+            <th scope="row">
+                <form action="/category/delete/{{id}}" method="POST">
+                    <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+                </form>
+                <a href="/category/edit/{{id}}" class="btn btn-warning">Edit</a>
+            </th>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

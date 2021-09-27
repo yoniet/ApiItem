@@ -1,0 +1,20 @@
+<div class="row g-0">
+    <div class="row g-3">
+        <form action="/category/edit/{{id}}" method="POST" class="row g-4">
+            <input type="text" name="id" value="{{id}}" hidden>
+            <div class="col-5">
+                <label for="numberCategory" class="form-label">Number Category</label>
+                <input type="text" class="form-control" name="numberCategory" value="{{numberCategory}}">
+            </div>
+            <br>
+            <div class="col-5">
+                <label for="name" class="form-label">Name Category</label>
+                <input type="text" class="form-control" name="name" value="{{name}}">
+            </div>
+            <br>
+            <div class="col-8">
+                <input type="submit" class="btn btn-primary" value="Save">
+            </div>
+        </form>
+    </div>
+</div>

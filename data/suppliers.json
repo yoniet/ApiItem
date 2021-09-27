@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "name": "Samsung",
+        "address": "Jerusalem",
+        "mail": "Samsung@Samsung.com",
+        "phone": "072111111"
+    },
+    {
+        "id": "2",
+        "name": "LG",
+        "address": "Tel-Aviv",
+        "mail": "lg@lg.com",
+        "phone": "072444444"
+    },
+    {
+        "id": "3",
+        "name": "Sharp",
+        "address": "Haifa",
+        "mail": "sharp@sharp.com",
+        "phone": "0729999999"
+    }
+]

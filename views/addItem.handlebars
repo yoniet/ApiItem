@@ -1,0 +1,57 @@
+<div class="row g-0">
+    <div class="row g-3">
+        <form action="/product/add" method="POST" class="row g-4">
+            <input type="text" name="id" hidden>
+            <div class="col-5">
+                <label for="catalogNumber" class="form-label">Catalog number</label>
+                <input type="text" class="form-control" name="catalogNumber">
+            </div>
+            <br>
+            <div class="col-5">
+                <label for="nameItem" class="form-label">Name Item</label>
+                <input type="text" class="form-control" name="nameItem">
+            </div>
+
+            <br>
+            <div class="col-5">
+                <label for="supplier" class="form-label">Supplier</label>
+                <select class="form-select" name="supplier" aria-label="Default select example" value="{{suppliers}}">
+                    <option value="">Select a Supplier</option>
+                    {{#each dataSupplier}}
+                    <option value="{{name}}">{{name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <br>
+            <div class="col-5">
+                <label for="price" class="form-label">Price</label>
+                <input type="number" class="form-control" name="price">
+            </div>
+            <br>
+            <div class="col-5">
+                <label for="description" class="form-label">Description</label>
+                <input type="text" class="form-control" name="description">
+            </div>
+            <br>
+            <div class="col-5">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-select" name="category" aria-label="Default select example" value="">
+                    <option value="">Select a Category</option>
+                    {{#each dataCategory}}
+                    <option value="{{name}}">{{name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <br>
+            <div class="col-5">
+                <label for="quantity" class="form-label">Quantity</label>
+                <input type="number" class="form-control" name="quantity">
+            </div>
+            <br>
+            <div class="col-8">
+                <input type="submit" class="btn btn-primary" value="Save">
+            </div>
+        </form>
+    </div>
+</div>
+{{!-- class="jumbotron text-center" --}}
