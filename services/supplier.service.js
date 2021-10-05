@@ -17,6 +17,14 @@ class SupplierService {
         return this._suppliers;
     }
 
+    getSize() {
+        return this._suppliers.length;
+    }
+
+    setSuppliers(dataSuppliers) {
+        this._suppliers = dataSuppliers;
+    }
+
     createSupplier(id, name, address, mail, phone) {
         const newSupplier = new Supplier(id, name, address, mail, phone);
         this._suppliers.push(newSupplier);
@@ -31,11 +39,11 @@ class SupplierService {
         this._suppliers.splice(indexInArray, 1);
     }
 
-    updateSupplier(id, newSupplier) {
+    updateSupplier(num, newSupplier) {
         const supplier = this._suppliers.find((supp)=> {
-            return supp.id === id;
+            return supp.id === num;
         });
-        Object.assign(supp, newSupplier);
+        Object.assign(supplier, newSupplier);
     }
 }
 
